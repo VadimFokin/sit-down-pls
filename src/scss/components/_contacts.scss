@@ -1,0 +1,137 @@
+.contacts {
+  padding-bottom: 70px;
+
+  &__breadcrumbs {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @include small-mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__field {
+    margin-right: 32px;
+    width: 624px;
+
+    @include small-mobile {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  &__input {
+    margin: 0;
+    width: 100%;
+  }
+
+  &__btn {
+    margin: 0;
+  }
+
+  &__map {
+    width: 100%;
+    height: 510px;
+
+    @include small-mobile {
+      height: 410px;
+    }
+  }
+
+  [class*="copyrights-pane"] {
+    display: none !important;
+  }
+}
+
+.ymaps-2-1-79-balloon {
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+}
+
+.ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
+  padding: 30px;
+
+  @include small-mobile {
+    padding: 10px 20px;
+  }
+}
+
+.ymaps-2-1-79-balloon__layout {
+  border-radius: 10px;
+}
+
+.balloon {
+  h4 {
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--text-color);
+  }
+
+  address {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 180%;
+    color: var(--text-color);
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-crusta);
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    @include small-mobile {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__worktime {
+    padding: 8px 0;
+    border-top: 1px solid var(--color-alabaster);
+    border-bottom: 1px solid var(--color-alabaster);
+    font-size: 14px;
+    line-height: 180%;
+    color: var(--text-color);
+
+    span {
+      color: var(--color-gray);
+    }
+  }
+
+  &__descr {
+    padding-top: 13px;
+    font-size: 14px;
+    line-height: 180%;
+    color: var(--text-color);
+
+    span {
+      color: var(--color-gray);
+    }
+
+    @include small-mobile {
+      padding-top: 5px;
+    }
+  }
+}

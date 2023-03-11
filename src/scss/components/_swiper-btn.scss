@@ -1,0 +1,79 @@
+.swiper-use {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 31px;
+  z-index: 100;
+
+  @include big-desktop {
+    right: 37px;
+  }
+
+  @include big-tablet {
+    right: 74px;
+  }
+
+  @include small-tablet {
+    right: 18px;
+  }
+
+  @include mobile {
+    right: 50%;
+    top: 102.7%;
+    transform: translateX(50%);
+  }
+
+  &__btn {
+    @include flex-all-center;
+
+    border: 2px solid var(--color-purple);
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    color: var(--color-purple);
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+
+    &:first-child {
+      margin-right: 13px;
+    }
+
+    svg {
+      display: block;
+      width: 14px;
+      height: 14px;
+      color: inherit;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2px;
+      object-fit: cover;
+    }
+
+    &:focus-visible {
+      color: var(--light-color);
+      background-color: var(--color-btn-focus);
+      outline: none;
+    }
+
+    &:hover {
+      color: var(--light-color);
+      background-color: var(--color-purple);
+    }
+
+    &:active {
+      border-color: var(--color-heart);
+      color: var(--light-color);
+      background-color: var(--color-heart);
+      outline: none;
+    }
+  }
+
+  .swiper-button-disabled {
+    border-color: var(--color-gray);
+    pointer-events: none;
+
+    svg {
+      stroke: var(--color-gray);
+    }
+  }
+}

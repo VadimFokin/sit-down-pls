@@ -1,0 +1,561 @@
+.catalog {
+  padding-bottom: 70px;
+  background-color: var(--light-color);
+
+  @include mobile {
+    padding-bottom: 68px;
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__left {
+    margin-right: 32px;
+    width: 296px;
+
+    @include big-desktop {
+      display: none;
+    }
+  }
+
+  &__right {
+    max-width: 952px;
+    width: 100%;
+    overflow: hidden;
+
+    @include big-desktop {
+      max-width: none;
+    }
+  }
+
+  &__filter {
+    margin-bottom: 88px;
+  }
+
+  &__title {
+    display: inline-block;
+    margin: 0;
+    margin-right: 17px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--text-color);
+
+    @include big-desktop {
+      margin-bottom: 13px;
+    }
+
+    @include big-tablet {
+      margin-bottom: 26px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__swiper {
+    .swiper-wrapper {
+      height: 1356px;
+
+      @include mobile {
+        margin-bottom: 32px;
+        height: 1050px;
+      }
+
+      @include small-mobile {
+        height: 868px;
+      }
+    }
+  }
+
+  .swiper-slide {
+    box-sizing: border-box;
+    position: relative;
+    width: auto;
+    min-height: 420px;
+    height: calc((100% - 64px) / 4);
+
+    @include mobile {
+      min-height: 330px;
+    }
+
+    @include small-mobile {
+      min-height: 278px;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-pagination-bullet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-purple);
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-purple);
+    background-color: transparent;
+    opacity: 1;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:focus {
+      border-color: var(--color-purple);
+      outline: none;
+      color: var(--light-color);
+      background-color: var(--color-btn-focus);
+    }
+
+    &:hover {
+      border-color: var(--color-purple);
+      color: var(--light-color);
+      background-color: var(--color-purple);
+    }
+
+    &:active {
+      border-color: var(--color-heart);
+      color: var(--light-color);
+      background-color: var(--color-heart);
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    border-color: var(--color-heart);
+    color: var(--light-color);
+    background-color: var(--color-heart);
+  }
+
+  &__options {
+    display: inline-flex;
+    flex-wrap: wrap;
+    z-index: 10;
+  }
+}
+
+.banner {
+  width: 296px;
+  overflow: hidden;
+
+  &__image {
+    font-size: 0;
+  }
+
+  &__content {
+    padding: 30px;
+    padding-right: 67px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--text-color);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: 'PlayfairDisplay', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: #d5b986;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-gray);
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--color-purple);
+    transition: color .3s ease-in-out, border-color .3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-bottom: 2px solid transparent;
+      width: 43%;
+      transform: translateY(3px);
+      transition: transform 0.3s linear;
+    }
+
+    span {
+      margin-right: 5px;
+    }
+
+    svg {
+      display: block;
+      width: 22px;
+      height: 22px;
+      color: inherit;
+      fill: none;
+      stroke: currentColor;
+      object-fit: cover;
+      transition: stroke .3s ease-in-out;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible::after {
+      border-color: inherit;
+      transform: translateY(1px);
+      transition: transform .2s linear;
+    }
+
+    &:hover {
+      span {
+        color: var(--color-purple);
+      }
+    }
+
+    &:hover::after {
+      border-color: inherit;
+      transform: translateY(1px);
+      transition: transform .2s linear;
+    }
+
+    &:active {
+      color: var(--color-btn-focus);
+
+      span {
+        border-color: var(--color-btn-focus);
+        color: var(--color-btn-focus);
+      }
+
+      svg {
+        stroke: var(--color-btn-focus);
+      }
+    }
+
+    &:active::after {
+      border-color: inherit;
+    }
+  }
+}
+
+.filter-dropdown {
+  display: none;
+  margin-bottom: 32px;
+
+  @include big-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include big-tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 32px;
+    width: 100%;
+
+    @include big-tablet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 32px;
+      max-width: 70%;
+    }
+
+    @include small-tablet {
+      max-width: 80%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+
+    @include small-mobile {
+      gap: 12px 16px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    grid-column: 2 span;
+
+    &:nth-child(-n + 2) {
+      z-index: 300;
+    }
+
+    @include big-tablet {
+      width: 187px;
+    }
+
+    @include mobile {
+      width: 177px;
+    }
+
+    @include small-mobile {
+      width: 140px;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    grid-column: 2 span;
+    margin-right: 43px;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--text-color);
+
+    @include big-desktop {
+      grid-column: 1 span;
+    }
+
+    @include big-tablet {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 200;
+    padding: 9px 89px 9px 13px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: inherit;
+    color: var(--text-color);
+    background-color: var(--color-alabaster);
+    transition: border-color .3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      margin-top: 3px;
+      border-width: 0px;
+      border-right: 1px solid var(--color-purple);
+      border-top: 1px solid var(--color-purple);
+      width: 8px;
+      height: 8px;
+      transform: rotate(135deg);
+      transition: transform .3s ease-in-out;
+    }
+
+    &--active {
+      border-color: var(--color-heart);
+
+      &::before {
+        margin-top: 7px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  z-index: 100;
+  padding: 30px 13px 30px 28px;
+  border: 1px solid var(--color-gallery);
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  background-color: var(--light-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+  @include small-mobile {
+    padding: 20px 10px;
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+
+    &-label {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-range {
+      margin-right: 11px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--light-grey);
+    }
+
+    &-input {
+      padding: 4px 10px;
+      border: 1px solid var(--color-gray);
+      border-radius: 2px;
+      width: 86px;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--light-grey);
+
+      &:focus {
+        border-color: var(--color-purple);
+        outline: none;
+        background-color: var(--color-blue-chalk);
+      }
+
+      &:hover {
+        border-color: var(--color-purple);
+      }
+
+      &:active {
+        border-color: var(--color-heart);
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__custom {
+    padding-left: 32px;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--light-grey);
+
+    @include small-mobile {
+      padding-left: 24px;
+      font-size: 14px;
+      line-height: 110%;
+    }
+
+    &::before {
+      width: 20px;
+      height: 20px;
+
+      @include small-mobile {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      background-size: 13px 10px;
+
+      @include small-mobile {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__btn {
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-purple);
+  }
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px 4px 5px 6px;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--light-grey);
+  transform: translateY(-6px);
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--grey {
+    background-color: var(--color-gallery);
+  }
+
+  &--pink-violet {
+    background-color: var(--color-blue-chalk);
+  }
+
+  &--lime-color {
+    background-color: #daffd1;
+  }
+
+  &__btn {
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      color: inherit;
+      fill: none;
+      stroke: currentColor;
+      object-fit: cover;
+      transition: stroke .3s ease-in-out;
+    }
+
+    &:focus-visible {
+      outline: none;
+
+      svg {
+        stroke: var(--color-btn-focus);
+      }
+    }
+
+    &:hover {
+      svg {
+        stroke: var(--color-purple);
+      }
+    }
+
+    &:active {
+      svg {
+        stroke: var(--color-heart);
+      }
+    }
+  }
+}

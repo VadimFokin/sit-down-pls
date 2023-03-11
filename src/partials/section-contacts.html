@@ -1,0 +1,47 @@
+<section class="section-contacts">
+  <div class="container section-contacts__container">
+    <div class="section-contacts__left">
+      <h2 class="title section-contacts__title">Мы всегда вам рады!</h2>
+      <p class="section-contacts__descr">Безусловно, новая модель организационной деятельности в значительной степени
+        обусловливает важность распределения внутренних резервов и ресурсов.
+        <span class="tooltip">
+          <button class="btn-reset tooltip__btn" aria-describedby="id1" aria-label="Всплывающая информация">
+            <svg class="tooltip__icon">
+              <use xlink:href="img/sprite.svg#tooltip"></use>
+            </svg>
+          </button>
+          <span class="tooltip__txt" id="id1" role="tooltip">
+            <span class="tooltip__arrow arrow"></span>
+            <span class="visually-hidden">Тултип: </span>
+            Реплицированные с зарубежных источников, исследования формируют глобальную сеть.
+          </span>
+        </span>
+      </p>
+      <form class="section-contacts__form contacts-form" action="#">
+        <label class="form-field contacts-form__field">
+          <input class="form-field__input input-name" type="text" name="name" placeholder="Как вас зовут?">
+        </label>
+        <label class="form-field contacts-form__field">
+          <input class="form-field__input input-tel" type="tel" name="phone" placeholder="Ваш телефон">
+        </label>
+        <label class="form-field contacts-form__field">
+          <input class="form-field__input input-mail" type="email" name="email" placeholder="Ваш e-mail">
+        </label>
+        <button class="btn-reset btn contacts-form__btn" type="submit"
+          aria-label="кнопка отправить данные">Отправить</button>
+        <label class="custom-checkbox contacts-form__checkbox">
+          <input class="custom-checkbox__input" type="checkbox" checked="checked">
+          <span class="custom-checkbox__text">Принимаю <a href="#" class="custom-checkbox__link">пользовательское
+              соглашение</a></span>
+        </label>
+      </form>
+    </div>
+    <div class="section-contacts__right">
+      <picture>
+        <source srcset="../img/contacts/contacts-background-768.svg" media="(max-width: 1020px)">
+        <img class="section-contacts__right-image" loading="lazy" src="../img/contacts/contacts-background.svg"
+          width="624" height="383" aria-hidden="true" alt="Фоновое изображение">
+      </picture>
+    </div>
+  </div>
+</section>

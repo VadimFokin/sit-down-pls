@@ -1,0 +1,50 @@
+.breadcrumbs {
+  @include flex-v-center;
+
+  @include mobile {
+    display: none;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+
+      &::after {
+        content: "/";
+        position: absolute;
+        top: 1px;
+        right: -13px;
+        color: var(--color-gray);
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-gray);
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    &:not([href]) {
+      pointer-events: none;
+      color: var(--color-heart);
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: var(--color-heart);
+      background-color: var(--color-blue-chalk);
+    }
+
+    &:hover {
+      color: var(--color-purple);
+      background-color: transparent;
+    }
+
+    &:active {
+      color: var(--color-heart);
+    }
+  }
+}

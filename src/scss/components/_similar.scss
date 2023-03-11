@@ -1,0 +1,46 @@
+.similar {
+  padding-bottom: 70px;
+  background-color: var(--light-color);
+
+  @include big-tablet {
+    padding-bottom: 73px;
+  }
+
+  @include mobile {
+    padding-bottom: 118px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 130%;
+
+    @include big-desktop {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__list {
+    box-sizing: border-box;
+    display: flex;
+    gap: 0;
+  }
+
+  &__item {
+    width: 296px;
+    height: auto;
+  }
+
+  &__item-content {
+    transform: translateY(-1px);
+  }
+
+  &__top {
+    @include mobile {
+      top: 104.7%;
+    }
+  }
+}

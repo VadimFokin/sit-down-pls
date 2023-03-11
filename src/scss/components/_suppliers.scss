@@ -1,0 +1,180 @@
+.suppliers {
+  background-color: var(--light-color);
+
+  &__breadcrumbs {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    max-width: 845px;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 69px;
+
+      @include mobile {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 13px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--text-color);
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 22px
+    }
+
+    &--mobile {
+      @include mobile {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 16px;
+    line-height: 180%;
+    color: var(--light-grey);
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 180%;
+    }
+
+    &--time {
+      display: flex;
+      align-items: center;
+      padding-left: 110px;
+      max-width: 630px;
+      min-height: 116px;
+      font-size: 24px;
+      line-height: 150%;
+      background-image: url('../img/suppliers-pencil.png');
+      background-size: 77px 116px;
+      background-position: left center;
+      background-repeat: no-repeat;
+
+      @include mobile {
+        padding-left: 52px;
+        max-width: 240px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        background-size: 36px 54px;
+      }
+    }
+  }
+
+  &__sublist {
+    &-item {
+      padding-left: 37px;
+      max-width: 625px;
+      background-size: 25px 25px;
+      background-position: left top;
+      background-repeat: no-repeat;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      &:nth-child(1) {
+        background-image: url('../img/suppliers-network.svg');
+      }
+
+      &:nth-child(2) {
+        background-image: url('../img/suppliers-briefcase.svg');
+      }
+
+      &:nth-child(3) {
+        background-image: url('../img/suppliers-request.svg');
+      }
+    }
+
+    &-descr {
+      line-height: 150%;
+    }
+  }
+
+  &__benefits {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      strong {
+        display: block;
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--color-crusta);
+
+        @include big-tablet {
+          margin-bottom: 13px;
+        }
+
+        @include mobile {
+          margin-bottom: 11px;
+        }
+      }
+    }
+  }
+
+  &__guarantee-list {
+    counter-reset: myCounter;
+  }
+
+  &__guarantee-item {
+    display: flex;
+    margin-bottom: 13px;
+
+    @include mobile {
+      margin-bottom: 9px;
+    }
+
+    &:last-child {
+      margin-bottom: 34px;
+
+      @include mobile {
+        margin-bottom: 7px;
+      }
+    }
+
+    &::before {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      display: inline-block;
+      margin-right: 17px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 180%;
+      color: var(--color-crusta);
+    }
+
+    &:nth-child(2) {
+      max-width: 800px;
+    }
+  }
+}

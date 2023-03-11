@@ -1,0 +1,130 @@
+.article-offer {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 37px 30px 30px;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 511px;
+  height: auto;
+  background-color: var(--color-alabaster);
+
+  &--big {
+    width: 100%;
+  }
+
+  &__discount {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    padding: 7px;
+    width: 83px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--light-color);
+    background-color: var(--color-crusta);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -27px;
+      border: 17px solid transparent;
+      border-left: 11px solid #ff862f;
+    }
+  }
+
+  &__pic {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 16px;
+    height: 245px;
+
+    &--tablet {
+      @include big-desktop {
+        margin-bottom: 48px;
+        width: 253px;
+        height: 213px;
+      }
+
+      @include small-tablet {
+        width: 220px;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 22px;
+    width: 224px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    pointer-events: none;
+    color: var(--text-color);
+  }
+
+  &__price {
+    margin-right: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    pointer-events: none;
+    color: var(--color-crusta);
+
+    @include small-tablet {
+      margin-right: 15px;
+    }
+
+    @include mobile {
+      margin-right: 26px;
+    }
+
+    &-old {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      text-decoration: line-through;
+      pointer-events: none;
+      color: var(--color-gray);
+    }
+  }
+
+  &__btn {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+
+  &__plan {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    width: 230px;
+    height: 107px;
+    background-image: url('../img/special/special-sofa-plan.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include big-desktop {
+      display: none;
+    }
+
+    &--vel {
+      width: 234px;
+      height: 124px;
+      background-image: url('../img/special/special-sofa-vel-plan.svg');
+    }
+  }
+}

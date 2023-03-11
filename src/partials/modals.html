@@ -1,0 +1,106 @@
+<div class="graph-modal">
+  <div class="graph-modal__container site-modal site-modal--form" id="modal-form" role="dialog" aria-modal="true"
+    data-graph-target="first">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <span class="graph-modal__close-line"></span>
+      <span class="graph-modal__close-line"></span>
+    </button>
+    <div class="graph-modal__content">
+      <h2 class="site-modal__title">Купить в один клик</h2>
+      <p class="site-modal__descr">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении
+        часа.</p>
+      <form class="site-modal__form" id="modal-form" action="#" method="post">
+        <label class="form-field site-modal__field">
+          <input class="form-field__input input-name" type="text" name="name" placeholder="Как вас зовут?" required>
+        </label>
+        <label class="form-field site-modal__field">
+          <input class="form-field__input input-tel" type="tel" name="phone" placeholder="Ваш телефон" required>
+        </label>
+        <button class="btn-reset btn site-modal__btn" type="submit"
+          aria-label="Кнопка отправить заявку">Отправить</button>
+        <label class="custom-checkbox site-modal__checkbox">
+          <input class="custom-checkbox__input" id="agreement" type="checkbox" name="agreement" checked="checked">
+          <span class="custom-checkbox__text">Принимаю <a href="#" class="custom-checkbox__link">пользовательское
+              соглашение</a></span>
+        </label>
+      </form>
+    </div>
+  </div>
+  <div class="graph-modal__container site-modal site-modal--use" role="dialog" aria-modal="true"
+    data-graph-target="second">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <span class="graph-modal__close-line"></span>
+      <span class="graph-modal__close-line"></span>
+    </button>
+    <div class="graph-modal__content site-modal__content">
+      <picture>
+        <source srcset="../img/modal-icon-320.svg" media="(max-width:410px)">
+        <img class="site-modal__image" loading="lazy" src="../img/modal-icon.svg" width="172" height="117"
+          aria-hidden="true" alt="Изображение">
+      </picture>
+      <p class="site-modal__descr site-modal__descr--use">Спасибо, мы вам перезвоним!</p>
+    </div>
+  </div>
+  <div class="graph-modal__container site-modal site-modal--slide" role="dialog" aria-modal="true"
+    data-graph-target="third">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <span class="graph-modal__close-line"></span>
+      <span class="graph-modal__close-line"></span>
+    </button>
+    <div class="graph-modal__content">
+      <div class="modal-slider">
+        <ul class="list-reset swiper-wrapper modal-slider__wrapper">
+          <li class="swiper-slide modal-slider__item" tabindex="0">
+            <img class="modal-slider__image" loading="lazy" src="img/D-31/D-31.png" alt="Диван тканевый прямой D-31">
+          </li>
+          <li class="swiper-slide modal-slider__item" tabindex="1">
+            <img class="modal-slider__image" loading="lazy" src="img/D-31/D-31-1.png" alt="Диван тканевый прямой D-31">
+          </li>
+          <li class="swiper-slide modal-slider__item" tabindex="2">
+            <img class="modal-slider__image" loading="lazy" src="img/D-31/D-31-2.png" alt="Диван тканевый прямой D-31">
+          </li>
+          <li class="swiper-slide modal-slider__item" tabindex="3">
+            <img class="modal-slider__image" loading="lazy" src="img/D-31/D-31-3.png" alt="Диван тканевый прямой D-31">
+          </li>
+          <li class="swiper-slide modal-slider__item" tabindex="4">
+            <img class="modal-slider__image" loading="lazy" src="img/D-31/D-31-4.png" alt="Диван тканевый прямой D-31">
+          </li>
+        </ul>
+      </div>
+      <div class="modal-slider-nav">
+        <ul class="list-reset swiper-wrapper modal-slider-nav__wrapper">
+          <li class="swiper-slide modal-slider-nav__item">
+            <img class="modal-slider-nav__image" loading="lazy" src="img/D-31/D-31.png"
+              alt="Диван тканевый прямой D-31">
+          </li>
+          <li class="swiper-slide modal-slider-nav__item">
+            <img class="modal-slider-nav__image" loading="lazy" src="img/D-31/D-31-1.png"
+              alt="Диван тканевый прямой D-31">
+          </li>
+          <li class="swiper-slide modal-slider-nav__item">
+            <img class="modal-slider-nav__image" loading="lazy" src="img/D-31/D-31-2.png"
+              alt="Диван тканевый прямой D-31">
+          </li>
+          <li class="swiper-slide modal-slider-nav__item">
+            <img class="modal-slider-nav__image" loading="lazy" src="img/D-31/D-31-3.png"
+              alt="Диван тканевый прямой D-31">
+          </li>
+          <li class="swiper-slide modal-slider-nav__item">
+            <img class="modal-slider-nav__image" loading="lazy" src="img/D-31/D-31-4.png"
+              alt="Диван тканевый прямой D-31">
+          </li>
+        </ul>
+        <button class="btn-reset modal-slider-nav__btn modal-slider-nav__btn--prev" aria-label="Предыдущий слайд">
+          <svg>
+            <use xlink:href="img/sprite.svg#btn-prev"></use>
+          </svg>
+        </button>
+        <button class="btn-reset modal-slider-nav__btn modal-slider-nav__btn--next" aria-label="Следующий слайд">
+          <svg>
+            <use xlink:href="img/sprite.svg#btn-next"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

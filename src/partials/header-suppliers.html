@@ -1,0 +1,131 @@
+<header class="header header--indent">
+  <div class="container header__container">
+    <div class="header__choices-region choices-region">
+      <label class="choices-region__text" for="select-region-first">
+        Ваш регион:
+      </label>
+
+      <select class="choices-region__select" id="select-region-first" name="selectRegion" aria-label="Выбор региона">
+        <option value="Москва">Москва</option>
+        <option value="Казань">Казань</option>
+        <option value="Уфа">Уфа</option>
+        <option value="Пермь">Пермь</option>
+      </select>
+    </div>
+    <a href="tel:74958854547" class="header__phone" aria-label="Позвонить по номеру: 84958854547">
+      <svg>
+        <use xlink:href="img/sprite.svg#tel"></use>
+      </svg>
+      +7 495 885-45-47
+    </a>
+    <nav class="header__submenu submenu">
+      <ul class="list-reset submenu__list">
+        <li class="submenu__item">
+          <a href="#" class="submenu__link">О компании</a>
+        </li>
+        <li class="submenu__item">
+          <a href="#" class="submenu__link">Гарантия и возврат</a>
+        </li>
+        <li class="submenu__item">
+          <a href="#" class="submenu__link">Корпоративным клиентам</a>
+        </li>
+        <li class="submenu__item">
+          <a href="#" class="submenu__link">Дизайн-решение</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="header__logo">
+      <img src="../img/Header/logo.svg" width="187" height="27" alt="Логотип магазина SitDownPls">
+    </a>
+    <nav class="header__menu menu" data-menu>
+      <button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close>
+        <span class="burger-close__line"></span>
+        <span class="burger-close__line"></span>
+      </button>
+      <ul class="list-reset menu__list">
+        <li class="menu__item">
+          <a href="/catalog.html" class="menu__link">Каталог</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Магазины</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Шоу-рум</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Доставка и оплата</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Дисконт</a>
+        </li>
+        <li class="menu__item">
+          <a href="/contacts.html" class="menu__link">Контакты</a>
+        </li>
+      </ul>
+
+      <ul class="list-reset menu__burger">
+        <li class="menu__burger-item">
+          <a href="#" class="menu__burger-link">О компании</a>
+        </li>
+        <li class="menu__burger-item">
+          <a href="#" class="menu__burger-link">Гарантия и возврат</a>
+        </li>
+        <li class="menu__burger-item">
+          <a href="#" class="menu__burger-link">Корпоративным клиентам</a>
+        </li>
+        <li class="menu__burger-item">
+          <a href="#" class="menu__burger-link">Дизайн-решение</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__forms">
+      <form class="header__form" action="#">
+        <label class="header__form-label">
+          <input class="input-reset header__form-input" type="text" name="Имя" placeholder="Я хочу купить...">
+          <svg class="header__form-image" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#form-search"></use>
+          </svg>
+        </label>
+        <label class="header__form-label">
+          <button class="btn-reset header__form-search" aria-label="Кнопка поиска по товарам">
+            <svg class="header__form-arrow" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#btn-next"></use>
+            </svg>
+          </button>
+        </label>
+      </form>
+      <div class="header__choices-category choices-category">
+        <select class="choices-category__select" name="selectCategory"
+          aria-label="Выберите категорию, в которой будет произведён поиск">
+          <option value="">Категория</option>
+          <option value="Диваны">Диваны</option>
+          <option value="Комоды">Комоды</option>
+          <option value="Кресла">Кресла</option>
+          <option value="Стулья">Стулья</option>
+          <option value="Пуфы">Пуфы</option>
+          <option value="Столы">Столы</option>
+          <option value="Кровати">Кровати</option>
+          <option value="Аксессуары">Аксессуары</option>
+          <option value="Тумбы">Тумбы</option>
+        </select>
+      </div>
+    </div>
+    <div class="private">
+      <a href="#" class="btn-reset private__profile" aria-label="Личный кабинет">
+        <svg class="private__icon">
+          <use xlink:href="img/sprite.svg#profile"></use>
+        </svg>
+      </a>
+      <a href="#" class="btn-reset private__basket" aria-label="Корзина товаров">
+        <svg class="private__icon">
+          <use xlink:href="img/sprite.svg#basket"></use>
+        </svg>
+      </a>
+    </div>
+    <button class="btn-reset burger header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+</header>

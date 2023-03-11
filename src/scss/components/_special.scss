@@ -1,0 +1,39 @@
+.special {
+  padding: 70px 0;
+
+  @include mobile {
+    padding-bottom: 118px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__swiper {
+    width: 100%;
+
+    &-slide {
+      width: 23.13%;
+
+      @include big-desktop {
+        width: 31.2%;
+      }
+
+      @include big-tablet {
+        width: 47.5%;
+      }
+
+      &:nth-child(3n - 1) {
+        width: 48.75%;
+
+        @include big-desktop {
+          width: 31.2%;
+        }
+
+        @include big-tablet {
+          width: 47.5%;
+        }
+      }
+    }
+  }
+}

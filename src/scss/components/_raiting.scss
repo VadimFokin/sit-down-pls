@@ -1,0 +1,65 @@
+.raiting {
+  padding-bottom: 70px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    margin-bottom: 34px;
+
+    @include big-desktop {
+      grid-template-columns: repeat(9, 1fr);
+    }
+
+    @include big-tablet {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include mobile {
+      gap: 16px;
+    }
+
+    @include mobile {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__item {
+    grid-column: 3 span;
+    height: 100%;
+
+    &:nth-child(n + 9) {
+      display: none;
+    }
+
+    @include big-desktop {
+      &:nth-child(n + 7) {
+        display: none;
+      }
+    }
+
+    &.is-visible {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__btn-hide {
+    margin: 0 auto;
+    padding: 21px 37px;
+
+    @include mobile {
+      padding: 21px 36px;
+      max-width: 296px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+
+// подключения компонентов страницы
+@import "./components/button";
+@import "./components/swiper-btn";
+@import "./components/choices-region";
+@import "./components/choices-category";
+@import "./components/article-offer";
+@import "./components/custom-checkbox";
+@import "./components/form-field";
+@import "./components/tooltip";
+@import "./components/product";
+@import "./components/breadcrumbs";
+@import "./components/burger";
+@import "./components/product-information";
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/special";
+@import "./components/raiting";
+@import "./components/promo";
+@import "./components/top";
+@import "./components/helpful";
+@import "./components/contacts";
+@import "./components/footer";
+
+
+@import "./components/suppliers";
+
+@import "./components/catalog";
+@import "./components/filter";
+
+@import "./components/sofa-description";
+@import "./components/similar";
+
+@import "./components/section-contacts";
